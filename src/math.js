@@ -4,5 +4,6 @@ export function add(numbers) {
   for (const number of numbers) {
     sum += parseInt(number);
   }
+
   return parseInt(sum);
 }

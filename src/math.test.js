@@ -46,5 +46,14 @@ it("should throw an error if there is no arguments", () => {
     add();
   };
 
-  expect(resultFn).toThrow();
+  expect(resultFn).toThrow(/is not iterable/);
+});
+
+it("should throw an error if provided multiple arguments instead of an array", () => {
+  //Act
+  const resultFn = () => {
+    add(1, 2, 3);
+  };
+  //Assert
+  expect(resultFn).toThrowError(/is not iterable/);
 });
